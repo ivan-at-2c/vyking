@@ -10,7 +10,9 @@
 
 ### 1. Insert Environment Variables
 
-Navigate to `deploy/tools/env` and create file named `backend.dev.env` and insert environment variables inside.
+Environment variables should not be included in the codebase.
+However, for simplicity, I have placed the environment variables in the `deploy/tools/env` directory.
+You can find them in `backend.dev.env`.
 
 ### 2. That's it
 
