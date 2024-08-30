@@ -70,5 +70,11 @@ export const joinTournament = async (
 };
 
 export const deletePlayer = async (id: string) => {
+  const player = await getPlayerByIdQuery(id);
+
+  if (!player) {
+    throw new ApiError("Player not found.", httpStatus.NOT_FOUND);
+  }
+
   return deletePlayerByIdQuery(id);
 };

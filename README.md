@@ -20,6 +20,11 @@ Yes! That's it, you can now start this project by running following in the root 
 
 ``docker compose up --build``
 
+
+### 3. Postman collection
+
+You can find postman collection in codebase root folder as well.
+
 ---
 
 # Project Description
@@ -60,6 +65,18 @@ END
 WHERE rankedPlayers.playerRank <= 3;
 ```
 
+### Optimization and Handling Edge Cases
+
+#### Optimization:
+
+Optimization should be that all checks, filtering etc. should be done in query for database so that we prevent unnecessary code and multiple calls to the database.
+
+#### Handling Edge Cases:
+
+Edge cases can be handled in the database, but we should also always try to prevent invalid data going into query. We should always aim to prevent unexpected behaviour in the database.
+
+---
+
 ## Power of CTEs and Functions
 
 ### CTE
@@ -69,5 +86,12 @@ CTEs are best used when we want to use complex data that is spread across multip
 ### Functions
 
 Functions would be best used when we have complex logic that is proven to work and is used on multiple places.
+
+
+### How could CTEs and Functions be used in more complex situations
+
+CTEs are most powerful when we need to get complex data or run multiple queries within 1 call to the database, its ease of use allows anyone to prefilter / generate some data before calling main query.
+
+Functions are most powerful when we have different parts of application that should trigger the same complex logic, then we can just create a function that could be simply called with provided data and it would speed up the development.
 
 ---

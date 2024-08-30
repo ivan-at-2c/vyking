@@ -9,9 +9,9 @@ services:
       MYSQL_PASSWORD: interview-pass
     volumes:
       - db-data:/var/lib/mysql
-    restart: unless-stopped
     ports:
       - 3306:3306
+    restart: unless-stopped
     healthcheck:
       test: 'exit 0'
     networks:
