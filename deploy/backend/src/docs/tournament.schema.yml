@@ -1,0 +1,53 @@
+components:
+  schemas:
+    Tournament:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        prize:
+          type: number
+        startDate:
+          type: number
+        endDate:
+          type: number
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    StartTournamentData:
+      type: object
+      properties:
+        name:
+          type: string
+        prize:
+          type: number
+
+    EndTournamentData:
+      type: object
+      properties:
+        id:
+          type: string
+
+    Bet:
+      type: object
+      properties:
+        id:
+          type: string
+        tournamentId:
+          type: string
+        playerId:
+          type: string
+        place:
+          type: number
+        bet:
+          type: number
+        joinedAt:
+          type: number
+        createdAt:
+          type: string
+        updatedAt:
+          type: string

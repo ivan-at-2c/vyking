@@ -1,0 +1,51 @@
+components:
+  schemas:
+    Player:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        balance:
+          type: number
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    CreatePlayerData:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+
+    PlayerRanking:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        balance:
+          type: number
+        rank:
+          type: string
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+
+    PlayerJoinTournamentData:
+      type: object
+      properties:
+        tournamentId:
+          type: string
+        bet:
+          type: number
